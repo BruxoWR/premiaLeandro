@@ -17,6 +17,6 @@ app.get('/fluxo', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('Servidor iniciado em http://localhost:3000');
+app.listen(8080, () => {
+  console.log('Servidor iniciado em http://localhost:8080');
 });
