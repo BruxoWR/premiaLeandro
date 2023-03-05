@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Garimpagem</title>
+  </head>
+  <body>
+    <script src="scripts.js"></script>
+    <div style="text-align: center">
+       <button id="btn-buscar-dados" style="background-color:crimson; width: 150px; height: 30px; color: white; font-weight: bolder;">FLUXO</button>
+       <button id="btn-enviar-dados" style="background-color:crimson; width: 150px; height: 30px; color: white; font-weight: bolder;">ENVIA ATENDEZAP</button>
+    </div>
+    <p id="mensagem">Esta é a mensagem inicial</p>
+    <hr>
+    <table id="enviados-table">
+      <thead>
+
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="7"></td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+    <table id="data-table">
+      <thead>
+        <tr>
+          <th style="width: 30px; text-align: left">ID</th>
+          <th style="width: 100px; text-align: left">SORTEIO</th>
+          <th style="width: 550px; text-align: left">PRÊMIO</th>
+          <th style="width: 100px; text-align: left">TIPO</th>
+          <th style="width: 440px; text-align: left">PARTICIPANTE</th>
+          <th style="width: 150px; text-align: left">WHATSAPP</th>
+          <th style="width: 100px; text-align: left">STATUS</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+
+  </body>
+</html>
+
+<script>
+  dadosGerais(); //Chama listarDados.php que tras listagemGeral.json
+  document.querySelector('#btn-enviar-dados').addEventListener('click', enviarDados);
+  setInterval(enviarDados, 5 * 60 * 1000); // chama a função a cada 5 minutos (5 * 60 * 1000 milissegundos)
+</script>
